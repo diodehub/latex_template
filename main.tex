@@ -2,16 +2,27 @@
 \usepackage{graphicx}
 \usepackage{times}
 \usepackage{amsmath}
+\usepackage{pkg/titlesec}
 \usepackage[a4paper,left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+\renewenvironment{abstract}
+  {\small
+   \titleformat{\abstractname}{\normalfont\Large\bfseries\raggedright}{\MakeUppercase{\abstractname}}{0em}{}
+   \list{}{
+     \setlength{\leftmargin}{0cm}
+     \setlength{\rightmargin}{\leftmargin}
+   }
+   \item\relax}
+  {\endlist}
 \linespread{1.5}
 \setlength{\parskip}{10pt}
-\begin{document}
 \fontsize{12}{14.4}
-\noindent
 \title{Report Title}
 \author{Your Name}
 \date{\today}
+
+\begin{document}
 \begin{titlepage}
+    \noindent
     \begin{center}
         \includegraphics[width=5cm]{img/logo.png}
 
@@ -27,18 +38,17 @@
         {\bfseries Submitted To:} \\
         Department of Electronics and Computer Engineering \\
         Thapathali Campus \\
-        Kathmandu, Nepal \linebreak[5]
-
+        Kathmandu, Nepal \linebreak[5] \\
         \today \\
     \end{center}
 \end{titlepage}
-\begin{abstract}
-% Add your abstract herethis is
-this is my abstract of report.
-\end{abstract}
+
+\input{chapters/copyright.tex}
+\input{chapters/abstract.tex}
+
+
 
 \tableofcontents
-
 \listoffigures
 \listoftables
 

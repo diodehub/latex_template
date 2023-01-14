@@ -1,15 +1,19 @@
-\documentclass{book}
+\documentclass[oneside]{book}
 \input{preamble}
+\nofiles
 \begin{document}
+\pagestyle{plain}
+\fancyfoot[C]{\thepage}
 \frontmatter
-\input{pre/cover}
+% \input{pre/cover}
 \input{pre/copyright.tex}
 \input{pre/acknowledgement.tex}
 \input{pre/abstract.tex}
+\renewcommand{\contentsname}{\Large\bfseries Table of content}
 \tableofcontents
+\cleardoublepage
 \listoffigures
 \listoftables
 \mainmatter
-
-% \asdfasdasdffasdfasdfasdfasdf
+% commentedasajksdfasdfasdfasdfasdfasdfasdfasdfasdf
 \end{document}

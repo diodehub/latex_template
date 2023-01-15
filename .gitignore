@@ -1,0 +1,6 @@
+./kile
+*.aux
+*.lof
+*.log
+*.lot
+*.toc

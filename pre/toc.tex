@@ -1,0 +1,16 @@
+\renewcommand{\cftchappresnum}{Chapter }
+\renewcommand\cftchapaftersnum{\hfill:\hfill}
+\renewcommand\cftchapnumwidth{2.5cm}
+
+
+\let\mtcontentsname\contentsname
+\renewcommand\contentsname{\hfill \Large CONTENTS\hfill\null{}} % dummy text \null{} to center the TOC title. 
+
+% Remove page number from TOC. Ref: https://tex.stackexchange.com/a/180877/193507
+\pagestyle{empty}
+{
+	\renewcommand{\thispagestyle}[1]{}
+	\tableofcontents
+}
+\clearpage
+\pagestyle{plain}

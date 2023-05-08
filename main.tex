@@ -1,19 +1,50 @@
-\documentclass[oneside]{book}
+\documentclass[a4paper, 12pt]{report}
+%======= all the configurations are in preamble.txt, edit there==========
 \input{preamble}
-\nofiles
+
+
 \begin{document}
-\pagestyle{plain}
-\fancyfoot[C]{\thepage}
-\frontmatter
-% \input{pre/cover}
-\input{pre/copyright.tex}
-\input{pre/acknowledgement.tex}
-\input{pre/abstract.tex}
-\renewcommand{\contentsname}{\Large\bfseries Table of content}
-\tableofcontents
-\cleardoublepage
-\listoffigures
-\listoftables
-\mainmatter
-% commentedasajksdfasdfasdfasdfasdfasdfasdfasdfasdf
+	
+	
+	%====== cover page, declaration, certificate ======% 
+	\input{pre/_cover}
+	% \maketitle     % this is default document_class cover page
+	\input{pre/declaration}
+	\input{pre/certificate}
+	\input{pre/toc}
+
+
+	% roman-numbering section-begins
+	\pagenumbering{roman} % roman-numbering page for pre-section of document
+	\include{pre/acknowledgement}
+	\clearpage
+	\input{pre/abstract}
+	\clearpage
+	\input{pre/toc_table}
+	\clearpage
+	\input{pre/toc_figure}
+	\clearpage
+	\input{pre/toc_abbv}
+	\clearpage
+	
+	%====== Chapters ======%
+	\pagenumbering{arabic} % from now 1,2,3,... used
+	\include{chp/chp1}
+	
+	
+	
+	
+	%========= Appendix==========%
+	\appendix
+	
+	
+	%======= Bibliography ======== %
+%	\renewcommand{\bibname}{REFERENCES}
+%	\bibliographystyle{plain}
+%	\renewcommand{\thepage}{}
+%	\bibliography{bib}
+	
+	\bibliographystyle{IEEEtran}
+	\bibliography{main}
+		
 \end{document}

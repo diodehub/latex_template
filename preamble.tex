@@ -15,6 +15,8 @@
 \usepackage[skip=12pt]{parskip} % Indentation between paragraphs
 %\usepackage[style=long,nonumberlist,toc,xindy,acronym,nomain]{glossaries}
 \usepackage{cite}
+\usepackage{listings}
+\usepackage{xcolor} % syntax highlighting in codes
 %\usepackage[style=ieee]{biblatex} % for iee standard citationa and bibliography
 %\addbibresource{bib.bib}
 
@@ -46,6 +48,19 @@
 \title{\cTitle}
 \date{\today}
 \author{Krishna Acharya, Dinanath Padhya, Eric Adhikari}
+%for code formatting configs
+\lstset{language=C++,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	showstringspaces=false,
+	breaklines=true,
+	numbers=left,
+	numberstyle=\tiny,
+	frame=single,
+	captionpos=b}
+
 
 % =========================================
 %           OVERWRITTEN SETTINGS
@@ -56,5 +71,4 @@
 {CHAPTER \thechapter}{20pt}{\Large\uppercase}
 % To fix table position using ht. package: float
 \restylefloat{table}
-\makeglossaries
 

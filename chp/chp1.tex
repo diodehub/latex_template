@@ -13,10 +13,18 @@ Place your image in chapters/images folder. Refer \ref{fig:waterfall}
 \section{Code snippets}
 Place your code snippets in codes folder. Refer \ref{fig:sample_code} 
 \begin{figure}
-	\input{codes/sample_code}
+
+	\begin{lstlisting}
+		#include <iostream>
+		
+		int main() {
+			std::cout << "Hello, World!" << std::endl;
+			return 0;
+		}
+	\end{lstlisting}
+
 	\caption{Sample function.}
 	\label{fig:sample_code}
-\end{figure}
 
 \section{Tables}
 \begin{table}[h!]

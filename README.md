@@ -1,9 +1,6 @@
-## latex report template Thapathali Campus template
+# Thapathali Campus Latex Report Template
 
-A latex report template for Thapathali Campus, Department of Electronics and Computer Engineering students. This template is modular and also ready to use.
-Refer to the documentation below for using this template.
-
-# latex_template
+A latex report template for Thapathali Campus, Department of Electronics and Computer Engineering students. This template is modular and also ready to use. Refer to the documentation below for using this template.
 
 - latex report Thapathali Campus template, modular and also ready to use.
 - specially formatted for Thapathali Campus, Department of Electronics and Computer Engineering
@@ -37,7 +34,7 @@ Refer to the documentation below for using this template.
 - add the references in bib.bib file Example:
 
 ```
-    @article{Shannon1948,
+ @article{Shannon1948,
   author = {Shannon, Claude E.},
   title = {A Mathematical Theory of Communication},
   journal = {Bell System Technical Journal},
@@ -48,6 +45,8 @@ Refer to the documentation below for using this template.
   doi = {10.1002/j.1538-7305.1948.tb00917.x}
 }
 ```
+
+Example 2
 
 ```
 @book{lamport1986document,
@@ -66,7 +65,7 @@ Refer to the documentation below for using this template.
 
 # How to add figures
 
-Place your image in `chap/img` folder. Refer \ref{fig:waterfall}
+Place your image in `chap/img` folder. Refer `\ref{fig:waterfall}`
 
 ```
 \begin{figure}
@@ -95,7 +94,7 @@ Place your image in `chap/img` folder. Refer \ref{fig:waterfall}
 
 # How to add footnotes
 
-The systematic approach of information theory \footnote{This is a footnote describing more about information theory and its context} .
+The systematic approach of information theory ```\footnote{This is a footnote describing more about information theory and its context}``` .
 
 # How to add equations
 

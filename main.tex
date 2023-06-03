@@ -1,14 +1,12 @@
 \documentclass[a4paper, 12pt]{report}
 %======= all the configurations are in preamble.txt, edit there==========
 \input{preamble}
-
-
 \begin{document}
 	
 	
 	%====== cover page, declaration, certificate ======% 
-	\input{pre/_cover}
-	% \maketitle     % this is default document_class cover page
+	\input{pre/_cover0.tex} % for external submission
+	\input{pre/_cover1.tex} % for internal submission
 	\input{pre/declaration}
 	\input{pre/certificate}
 	\input{pre/toc}
@@ -29,7 +27,7 @@
 	
 	%====== Chapters ======%
 	\pagenumbering{arabic} % from now 1,2,3,... used
-	\include{chp/chp1}
+	\include{chapters/chp1}
 	
 	
 	
@@ -39,12 +37,12 @@
 	
 	
 	%======= Bibliography ======== %
-%	\renewcommand{\bibname}{REFERENCES}
-%	\bibliographystyle{plain}
-%	\renewcommand{\thepage}{}
-%	\bibliography{bib}
-	
+	% \bibliographystyle{IEEEtran}
+	% \bibliography{reference}
+
 	\bibliographystyle{IEEEtran}
-	\bibliography{bib}
+	\bibliography{references}	
+
+
 		
 \end{document}

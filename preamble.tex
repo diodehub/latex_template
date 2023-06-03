@@ -1,30 +1,27 @@
 % =========================================
 %               PACKAGES
 % =========================================
-\usepackage[]{graphicx}
 \usepackage{graphicx}
 \usepackage[justification=centering]{caption} % All captions will be centered. 
 \usepackage{url} % To include in URL in reference. 
 \usepackage[nottoc]{tocbibind} %Includes "References" in the table of contents
-\usepackage{setspace} % To add linespace
 \usepackage{tocloft} % To change formatting of main list. 
-\usepackage{titlesec} % Customize chapter title: Make it centered. 
 \usepackage[a4paper, left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
-\usepackage{float} % To use ht with table. To fix table position. 
-%\usepackage{minted} % For code. 
-\usepackage[skip=12pt]{parskip} % Indentation between paragraphs
-%\usepackage[style=long,nonumberlist,toc,xindy,acronym,nomain]{glossaries}
-\usepackage{cite}
+\usepackage{parskip}
 \usepackage{listings}
 \usepackage{xcolor} % syntax highlighting in codes
-%\usepackage[style=ieee]{biblatex} % for iee standard citationa and bibliography
-%\addbibresource{bib.bib}
-
-
-%\usepackage[smaller]{acronym}
-
-
-%\usepackage[]{times}
+\usepackage[]{times}
+\usepackage{times} % for Times New Roman font
+\usepackage{caption} % for caption management
+\usepackage{setspace} % for line spacing
+\usepackage{graphicx} % for figures
+\usepackage{datetime2} % for date management
+\usepackage{titlesec} % for overriding the default heading styles
+\usepackage{textcase} % for managing text-cases Title Case, Sentence case, UPPERCASE ,etc.
+\usepackage{microtype} % for micro-typography
+\usepackage[]{parskip} % for paragraph no indentation
+\usepackage{sectsty}
+\usepackage{setspace}
 
 % =========================================
 %               MACROS
@@ -37,9 +34,14 @@
 \newcommand\cSubmittedII{Eric Adhikari (THA078BEI020)}
 \newcommand\cSubmittedIII{Krishna Acharya (THA078BEI020)}
 \newcommand\cSubmittedIV{Eric Adhikari (THA078BEI020)}
-\newcommand\cHod{Dinanath Padhya}
-\newcommand\cGuide{Bibek Poudel}
+\newcommand\cSupervisor{Sup.Dinanath Padhya}
+\newcommand\cProjectCoordinator{CoorBibek Poudel}
+\newcommand\cHOD{HodBibek Poudel}
+\newcommand\cExternalExaminer{extBibek Poudel}
 
+
+% date setting
+\newcommand\cDate{March 2023}
 
 % =========================================
 %               CONFIGS
@@ -61,14 +63,23 @@
 	frame=single,
 	captionpos=b}
 
+% \chapterfont{\fontsize{12}{15}\bfseries\MakeUppercase}
+\sectionfont{\fontsize{12}{15}\bfseries}
+\subsectionfont{\fontsize{12}{15}\bfseries}
+\subsubsectionfont{\fontsize{12}{15}\bfseries}
 
 % =========================================
 %           OVERWRITTEN SETTINGS
 % =========================================
-% Center the chapter title and make it uppercase. 
-\titleformat{\chapter}[display]
-	{\normalfont\Large\bfseries\centering}
-{CHAPTER \thechapter}{20pt}{\Large\uppercase}
-% To fix table position using ht. package: float
-\restylefloat{table}
 
+
+\makeatletter
+\renewcommand{\@chapapp}{}
+\makeatother
+\titleformat{\chapter}[hang]{\fontsize{12}{15}\bfseries \MakeUppercase }{\thechapter. }{0pt}{}
+\titlespacing*{\chapter}{0pt}{0pt}{12pt}
+
+% To fix table position using ht. package: float
+% bibliography
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{references.bib} % Replace 'references' with the name of your .bib file

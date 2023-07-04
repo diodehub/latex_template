@@ -20,8 +20,10 @@
 \usepackage{textcase} % for managing text-cases Title Case, Sentence case, UPPERCASE ,etc.
 \usepackage{microtype} % for micro-typography
 \usepackage[]{parskip} % for paragraph no indentation
-\usepackage{sectsty}
-\usepackage{setspace}
+\usepackage{sectsty} % overriding default section styles
+\usepackage{setspace} % for line spacing
+\usepackage[numbers]{natbib} % for bibliography
+
 
 % =========================================
 %               MACROS
@@ -81,5 +83,7 @@
 
 % To fix table position using ht. package: float
 % bibliography
-\usepackage[backend=biber,style=ieee]{biblatex}
-\addbibresource{references.bib} % Replace 'references' with the name of your .bib file
+% \usepackage[backend=biber,style=ieee]{biblatex}
+% \addbibresource{references.bib}
+
+

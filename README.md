@@ -105,6 +105,16 @@ The systematic approach of information theory ```\footnote{This is a footnote de
 \end{equation}
 ```
 
+# How to Compile?
+- Run LaTeX (e.g., `pdflatex main.tex`)
+- Run BibTeX (e.g., `bibtex main`)
+- Run LaTeX twice more (e.g., `pdflatex main.tex` and `pdflatex main.tex`) to incorporate the bibliography citations.
+
+Alternatively, You can also use the built in `Makefile` to compile the latex file. 
+- Just run `make all` in the terminal to build `pdf`
+- run `make clean` to clean the build files
+
+
 # Thank you
 
 - Report any issue or problem in the github issue tracker:
